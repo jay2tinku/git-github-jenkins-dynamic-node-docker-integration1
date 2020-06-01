@@ -19,4 +19,3 @@ EXPOSE 80
 EXPOSE 22
 RUN ./start.sh
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]
-

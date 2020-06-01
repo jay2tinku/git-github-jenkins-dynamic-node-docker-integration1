@@ -18,4 +18,3 @@ spec:
       containers:
       - name: myweb-con
         image: vimal13/apache-webserver-php
-
