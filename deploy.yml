@@ -17,4 +17,6 @@ spec:
     spec:
       containers:
       - name: myweb-con
-        image: vimal13/apache-webserver-php
+        image: rakesh15/webserver-task4:latest
+
+
