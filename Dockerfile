@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:centos7
 RUN yum install wget -y
 RUN yum install sudo -y
 RUN yum install net-tools -y
@@ -15,6 +15,7 @@ RUN mkdir /var/run/sshd
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
 
 RUN chmod 755 /start.sh
+EXPOSE 80
 EXPOSE 22
 RUN ./start.sh
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]
