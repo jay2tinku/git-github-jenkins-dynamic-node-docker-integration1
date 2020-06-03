@@ -10,7 +10,7 @@
 #
 #
 #
-FROM centos:v7
+FROM centos:7
 RUN yum clean all
 RUN yum update
 RUN yum install wget -y
