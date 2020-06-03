@@ -1,9 +1,10 @@
-<?php>
-<pre>
+Welcome to my web server - Deployment
 
-print `ifconfig`
-
-
-</pre>
-?>
-
+#<?php>
+#<pre>
+#
+#print `ifconfig`
+#
+#</pre>
+#?>
+#

@@ -9,6 +9,5 @@ echo ssh user password: $SSH_USERPASS
 }
 
 
-
 # Call all functions
 __create_user
