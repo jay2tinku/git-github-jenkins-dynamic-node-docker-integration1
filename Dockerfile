@@ -12,7 +12,7 @@
 #
 FROM centos:7
 RUN yum clean all
-RUN yum update
+RUN yum update -y
 RUN yum install wget -y
 RUN yum install sudo -y
 RUN yum install net-tools -y
