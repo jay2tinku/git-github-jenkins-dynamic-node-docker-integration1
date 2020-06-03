@@ -19,4 +19,3 @@ spec:
       - name: myweb-con
         image: rakesh15/webserver-task4:latest
 
-
