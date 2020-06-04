@@ -1,11 +1,11 @@
 Welcome to my web server - Deployment
+This is version: 2
 
+<?php>
+<pre>
 
-#<?php>
-#<pre>
-#
-#print `ifconfig`
-#
-#</pre>
-#?>
-#
+print `ifconfig`
+
+</pre>
+?>
+
