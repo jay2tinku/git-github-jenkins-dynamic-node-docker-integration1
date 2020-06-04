@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: myweb-con
-        image: rakesh15/webserver-task4:latest
+        image: rakesh15/webserver-task4:3
         ports:
           - containerPort: 80
             name: myweb-port
