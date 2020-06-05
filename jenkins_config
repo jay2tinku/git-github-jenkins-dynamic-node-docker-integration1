@@ -1,0 +1,59 @@
+JOB1
+
+Description
+-----------------------------------------------------------------------------------------
+|        Download developer code from GitHub to local directory        |
+-----------------------------------------------------------------------------------------
+
+Repository URL
+
+https://github.com/jay2tinku/git-github-jenkins-dynamic-node-docker-integration1.git
+
+Poll SCM
+* * * * *
+
+Repository Name
+rakesh15/webserver-task4
+v3
+
+Docker Host URI
+tcp://192.168.99.103:4243
+ 	
+Registry credentials
+rakesh15/******
+
+
+JOB2
+
+Description
+--------------------------------------------------------------------------------------
+|                                Launch a Deployment                                   |
+--------------------------------------------------------------------------------------
+
+Restrict where this project can be run
+slave1
+
+Build after other projects are built
+task4-job1,
+
+
+Build
+
+if sudo kubectl get deployment.apps/myweb-deploy
+then
+	sudo echo "Deployment is already exist, so REPLACE!"
+	sudo kubectl replace -f /var/lib/jenkins/workspace/task4-job1/deploy.yml
+else
+	echo "Creating a Deployment!"
+	sudo kubectl create -f /var/lib/jenkins/workspace/task4-job1/deploy.yml
+fi
+
+if sudo kubectl get service/myweb-deploy
+then
+	sudo echo "Already EXPOSED!"
+else
+	sudo kubectl expose deployment myweb-deploy --port=80 --type=NodePort
+fi
+
+
+sudo kubectl set image deploy myweb-deploy myweb-con=rakesh15/webserver-task4:v3
